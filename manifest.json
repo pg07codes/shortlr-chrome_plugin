@@ -12,6 +12,7 @@
     "default_popup": "popup.html",
     "default_icon": "logo16.png"
   },
+  "options_page":"options.html",
   "permissions": [
     "https://cb.lk/"
   ]

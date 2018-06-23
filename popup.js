@@ -3,20 +3,37 @@
 let $LongURL = $('#url')
 let $secret=$('#secret')
 let $code=$('#code')
-let $shortCode=$('#shortcode')
+let $shortCode=$('#shortCode')
+
 
 $('#submit').click(function (){
-    $.post('https://cb.lk/api/v1/shorten', {
+    if ($LongURL.val().length === 0){
+        $shortCode.empty()
+        $shortCode.append(`URL field empty`)
+    }
+    else if ($secret.val().length === 0){
+        $shortCode.empty()
+        $shortCode.append(`SECRET field empty`)
+    }
+    else{
+        $.post('https://cb.lk/api/v1/shorten', {
         url: $LongURL.val(),
         crossDomain:true,
         secret: $secret.val(),
         code: $code.val()
     }, function (data) {
-        console.log(data)
-        $("#shortcode").append(`
-        <input class="form-control form-control-sm input col-6" value="https://cb.lk/${data.shortcode}" type="url">
-        <button class="btn btn-sm btn-light col-2" id="copy">COPY</button>
-        `)
+            if(data==="No more making links without secret"){
+                $shortCode.empty()
+                $shortCode.append(`SECRET not valid`)
+            }
+            else{
+                $shortCode.empty()
+                $shortCode.append(`
+            <input style="color:white;" class="form-control form-control-sm input bg-dark col-8" value="https://cb.lk/${data.shortcode}" type="url">
+            `)
+            }
 
-    })
+        })
+    }
+
 })
