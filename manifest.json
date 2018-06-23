@@ -1,6 +1,6 @@
 {
   "name": "shortlr",
-  "description" : "it is an easy to use url shortening service",
+  "description" : "It is an easy to use URL shortening service.",
   "version": "1.0",
   "manifest_version": 2,
   "icons": {
