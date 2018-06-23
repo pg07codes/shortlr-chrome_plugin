@@ -12,12 +12,11 @@ $('#submit').click(function (){
         secret: $secret.val(),
         code: $code.val()
     }, function (data) {
-       console.log(data)
-        // if (typeof data === 'string') {
-        //     $shortCode.html(data)
-        // }
-        // else{
-        //     $shortCode.html(`<p>some invalidation ahs occured</p>`)
-        // }
+        console.log(data)
+        $("#shortcode").append(`
+        <input class="form-control form-control-sm input col-6" value="https://cb.lk/${data.shortcode}" type="url">
+        <button class="btn btn-sm btn-light col-2" id="copy">COPY</button>
+        `)
+
     })
 })
