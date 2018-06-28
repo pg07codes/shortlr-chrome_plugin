@@ -2,16 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.1/lux/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
     <title>popup</title>
 </head>
 <body>
     <div class="form-group row justify-content-center">
-        <input class="form-control form-control-sm input col-8" id="url" placeholder="URL" name="url" required>
+        <input class="form-control form-control-sm input col-8" id="url" placeholder="URL" name="url" autofocus tabindex="1">
         <input class="form-control form-control-sm input col-8" id="code" placeholder="Custom Shortcode (optional)" name="code">
-        <input class="form-control form-control-sm input col-8" id="secret" type="password" placeholder="Secret (needed)" name="secret" required>
-        <button class="btn btn-sm btn-success col-8" id="submit" type="submit">Shorten</button>
+        <input class="form-control form-control-sm input col-8" id="secret" type="password" placeholder="Secret (needed)" name="secret" tabindex="2">
+        <button class="btn btn-sm btn-success col-8" id="submit" tabindex="3" type="submit">Shorten</button>
     </div>
 
     <div id="shortCode" class="row justify-content-center">
@@ -19,8 +19,8 @@
     </div>
     <script src="jquery.min.js"></script>
     <script src="popup.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="popper.min.js"></script>
+    <script src="bootstrap.min.js"></script>
 
 </body>
 </html>

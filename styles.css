@@ -7,3 +7,6 @@ body,html{
 .input{
     margin:5px;
 }
+.notif{
+    padding:2px !important;
+}
