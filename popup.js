@@ -4,7 +4,13 @@ let $LongURL = $('#url')
 let $secret=$('#secret')
 let $code=$('#code')
 let $shortCode=$('#shortCode')
+let currentURL=""
 
+chrome.tabs.query({'active': true},function(tabs){
+    currentURL=tabs[0].url
+    $LongURL.attr('value',`${currentURL}`)
+    $LongURL.select()
+})
 
 $('#submit').click(function (){
     if ($LongURL.val().length === 0){
