@@ -37,9 +37,10 @@ $('#submit').click(function (){
                 $shortCode.append(`
             <input style="color:white;" class="form-control form-control-sm input bg-dark col-8" value="https://cb.lk/${data.shortcode}" id="shortURL" type="url">
             <div class="alert alert-danger notif" role="alert">Copied to clipboard!</div>`)
+                $("#shortURL").select()
+                document.execCommand('copy')
+                document.getSelection().removeAllRanges()
             }
-            $("#shortURL").select()
-            document.execCommand('copy')
         })
     }
 
