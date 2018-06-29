@@ -3,18 +3,28 @@
   "description" : "It is an easy to use URL shortening service.",
   "version": "1.0",
   "manifest_version": 2,
+
   "icons": {
     "128": "logo128.png",
     "64": "logo64.png",
     "16": "logo16.png"
   },
+
   "browser_action": {
     "default_popup": "popup.html",
     "default_icon": "logo16.png"
   },
+
   "options_page":"options.html",
+  "background":{
+    "scripts":["eventPage.js"],
+    "persistent":false
+  },
+
+
   "permissions": [
     "https://cb.lk/",
-    "tabs"
+    "tabs",
+    "contextMenus"
   ]
 }
