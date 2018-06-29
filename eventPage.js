@@ -38,7 +38,11 @@ chrome.contextMenus.onClicked.addListener((data)=>{
                  code: ''   // no way to pass custom secret here, so it is empty by default
              }, function (data) {
                  console.log("short url arrived")
-                 // document.execCommand('copy')
+                 let url=document.createElement('input')
+                 url.setAttribute('value',`https://cb.lk/${data.shortcode}`)
+                 document.body.appendChild(url)
+                 url.select()
+                 document.execCommand('copy')
                  alert("Short link copied to clipboard!")
              })
          }
