@@ -7,6 +7,9 @@
 - Load unpacked chrome extension by selecting the cloned repo folder.
 - IT's READY TO USE NOW.
 ```
+
+## DEPRECATED!!
+*this may not work as intended as of 2019 due to various changes in the shortlr API which was used to shorten URL*
 ## Contributed by:
-- this project is developed by pg07codes.
-- PULL REQUESTS ARE ALWAYS WELCOME.
+- this project was developed by pg07codes.
+
