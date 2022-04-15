@@ -1,5 +1,10 @@
 # shortlr
 *It is a Google Chrome extension for URL shortening which uses codingblocks SHORTLR api to shorten URL*
+
+
+## DEPRECATED!!
+*this may not work as intended as of 2020 due to various breaking changes introduced the shortlr API v2.* **Feel free to checkout my chrome extension to quickly generate QR codes for URL to share or save. [available here](https://github.com/pg07codes/getmeQR)**
+
 ## How to set it up?
 ```
 - git `clone` this repository.
@@ -8,8 +13,6 @@
 - IT's READY TO USE NOW.
 ```
 
-## DEPRECATED!!
-*this may not work as intended as of 2019 due to various changes in the shortlr API which was used to shorten URL*
 ## Contributed by:
-- this project was developed by pg07codes.
+- this project is developed by [pg07codes](https://github.com/pg07codes).
 
